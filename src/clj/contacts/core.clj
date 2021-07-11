@@ -20,6 +20,11 @@
   (println "Server started")
   (reset! server (run-server app {:port 4000})))
 
+(defn restart-server []
+  (stop-server)
+  (-main))
+
+
 (comment
   (-main)
 )
